@@ -31,8 +31,12 @@ def NPCRUACI(img_name, mode, key, key_size, iv_size, info_out_file):
 
     # Run 1
     img1 = cv2.imread(img_name, cv2.IMREAD_GRAYSCALE)
-    img1[0, 0] = getNextPixcel(img1[0, 0])
+    #img1[0, 0] = getNextPixcel(img1[0, 0])
     rows, cols = img1.shape
+    row_img1 = random.randint(0,rows-1)
+    col_img1 = random.randint(0,cols-1)
+    img1[row_img1, col_img1] = random.randint(0,255)
+    
     cv2.imwrite("t1.png", img1)
 
     aes1 = AES_IMAGE(mode = mode, key_size = key_size, iv_size = iv_size)
@@ -45,13 +49,17 @@ def NPCRUACI(img_name, mode, key, key_size, iv_size, info_out_file):
     encrypt_image_run1 = cv2.imread("t2.png", cv2.IMREAD_GRAYSCALE)
     NPCR1, UACI1 = getEachNPCRUACI(orig_image_run1, encrypt_image_run1)
     f.write('First Pixcel: \n')
+    infoFile.write('\nrow: '+str(row_img1)+' col: '+str(col_img1))
     f.write('NPCR: ' + str(round(NPCR1,6)) + "\n")
     f.write('UACI: ' + str(round(UACI1,6)) + "\n")
 
     
     # Run 2
     img2 = cv2.imread(img_name, cv2.IMREAD_GRAYSCALE)
-    img2[int(rows / 2), int(cols / 2)] = getNextPixcel(img2[int(rows / 2), int(cols / 2)])
+    #img2[int(rows / 2), int(cols / 2)] = getNextPixcel(img2[int(rows / 2), int(cols / 2)])
+    row_img2 = random.randint(0,rows-1)
+    col_img2 = random.randint(0,cols-1)
+    img2[row_img2, col_img2] = random.randint(0,255)
     cv2.imwrite("t1.png", img2)
 
     aes2 = AES_IMAGE(mode = mode, key_size = key_size, iv_size = iv_size)
@@ -63,14 +71,18 @@ def NPCRUACI(img_name, mode, key, key_size, iv_size, info_out_file):
     orig_image_run2 = cv2.imread("t1.png", cv2.IMREAD_GRAYSCALE)
     encrypt_image_run2 = cv2.imread("t2.png", cv2.IMREAD_GRAYSCALE)
     NPCR2, UACI2 = getEachNPCRUACI(orig_image_run2, encrypt_image_run2)
-    f.write('Midle Pixcel: \n')
+    f.write('Second Pixcel: \n')
+    infoFile.write('\nrow: '+str(row_img2)+' col: '+str(col_img2))
     f.write('NPCR: ' + str(round(NPCR2,6)) + "\n")
     f.write('UACI: ' + str(round(UACI2,6)) + "\n")
 
 
     # Run 3
     img3 = cv2.imread(img_name, cv2.IMREAD_GRAYSCALE)
-    img3[rows - 1, cols - 1] = getNextPixcel(img3[rows - 1, cols - 1])
+    #img3[rows - 1, cols - 1] = getNextPixcel(img3[rows - 1, cols - 1])
+    row_img3 = random.randint(0,rows-1)
+    col_img3 = random.randint(0,cols-1)
+    img2[row_img3, col_img3] = random.randint(0,255)
     cv2.imwrite("t1.png", img3)
 
     aes3 = AES_IMAGE(mode = mode, key_size = key_size, iv_size = iv_size)
@@ -82,7 +94,8 @@ def NPCRUACI(img_name, mode, key, key_size, iv_size, info_out_file):
     orig_image_run3 = cv2.imread("t1.png", cv2.IMREAD_GRAYSCALE)
     encrypt_image_run3 = cv2.imread("t2.png", cv2.IMREAD_GRAYSCALE)
     NPCR3, UACI3 = getEachNPCRUACI(orig_image_run3, encrypt_image_run3)
-    f.write('Last Pixcel: \n')
+    f.write('Third Pixcel: \n')
+    infoFile.write('\nrow: '+str(row_img3)+' col: '+str(col_img3))
     f.write('NPCR: ' + str(round(NPCR3,6)) + "\n")
     f.write('UACI: ' + str(round(UACI3,6)) + "\n")
 
