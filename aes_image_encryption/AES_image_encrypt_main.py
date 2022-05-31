@@ -31,8 +31,9 @@ def main():
     iv_size = AES.block_size if mode == AES.MODE_CBC else 0
 
     # Set Target Image Name
-    path = "/home/xue/crypto/image-encryption/Dataset/"
-    img_num = '10'
+    path = "C:/Users/jonat/Desktop/DNA-Cryptography/aes_image_encryption/Dataset/"
+    # C:\Users\jonat\Desktop\DNA-Cryptography\aes_image_encryption\Dataset
+    img_num = '66'
     img = path + img_num + ".jpg"
     img_enc = path + "img_enc" + img_num + mode_name + ".bmp"
     img_dec = path + "img_dec" + img_num + mode_name + ".bmp"

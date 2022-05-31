@@ -1,0 +1,28 @@
+Time for Encryption: 0.008
+
+Statistical Analysis: 
+
+Correlation Coefficient: 
+Horizontal: -0.0195
+Vertical: -0.012
+Diagonal: -0.0053
+
+Sensibility Analysis: 
+
+Entropy: 
+Entropy for Original Image: 7.084719642849917
+Entropy for Encrypted Image: 7.637537593717083
+
+NPCRUACI: 
+First Pixcel: 
+NPCR: 0.994776
+UACI: 0.227797
+Midle Pixcel: 
+NPCR: 0.994577
+UACI: 0.225759
+Last Pixcel: 
+NPCR: 0.994796
+UACI: 0.227434
+Average: 
+NPCR: 0.994716
+UACI: 0.226997
