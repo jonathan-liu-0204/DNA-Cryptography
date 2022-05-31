@@ -90,8 +90,8 @@ def getCorrelation(img, x, y):
 
 
 def showImage(orig_image, encrypt_image, fig_name):
-    plt.subplot(231), plt.imshow(orig_image), plt.title('ORIGINAL')
-    plt.subplot(232), plt.imshow(encrypt_image), plt.title('AES')
+    plt.subplot(231), plt.imshow(orig_image, cmap='gray',vmin=0, vmax=255), plt.title('ORIGINAL')
+    plt.subplot(232), plt.imshow(encrypt_image, cmap='gray',vmin=0, vmax=255), plt.title('AES')
     hist1 = cv2.calcHist([orig_image], [0], None, [256], [0, 256])
     hist3 = cv2.calcHist([encrypt_image], [0], None, [256], [0, 256])
 
