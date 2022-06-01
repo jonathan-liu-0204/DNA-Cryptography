@@ -49,7 +49,7 @@ def NPCRUACI(img_name, mode, key, key_size, iv_size, info_out_file):
     encrypt_image_run1 = cv2.imread("t2.png", cv2.IMREAD_GRAYSCALE)
     NPCR1, UACI1 = getEachNPCRUACI(orig_image_run1, encrypt_image_run1)
     f.write('First Pixcel: \n')
-    infoFile.write('\nrow: '+str(row_img1)+' col: '+str(col_img1))
+    f.write('row: ' + str(row_img1) + ' col: ' + str(col_img1) + '\n')
     f.write('NPCR: ' + str(round(NPCR1,6)) + "\n")
     f.write('UACI: ' + str(round(UACI1,6)) + "\n")
 
@@ -72,7 +72,7 @@ def NPCRUACI(img_name, mode, key, key_size, iv_size, info_out_file):
     encrypt_image_run2 = cv2.imread("t2.png", cv2.IMREAD_GRAYSCALE)
     NPCR2, UACI2 = getEachNPCRUACI(orig_image_run2, encrypt_image_run2)
     f.write('Second Pixcel: \n')
-    infoFile.write('\nrow: '+str(row_img2)+' col: '+str(col_img2))
+    f.write('row: ' + str(row_img2) + ' col: ' + str(col_img2) + '\n')
     f.write('NPCR: ' + str(round(NPCR2,6)) + "\n")
     f.write('UACI: ' + str(round(UACI2,6)) + "\n")
 
@@ -95,7 +95,7 @@ def NPCRUACI(img_name, mode, key, key_size, iv_size, info_out_file):
     encrypt_image_run3 = cv2.imread("t2.png", cv2.IMREAD_GRAYSCALE)
     NPCR3, UACI3 = getEachNPCRUACI(orig_image_run3, encrypt_image_run3)
     f.write('Third Pixcel: \n')
-    infoFile.write('\nrow: '+str(row_img3)+' col: '+str(col_img3))
+    f.write('row: ' + str(row_img3) + ' col: ' + str(col_img3) + '\n')
     f.write('NPCR: ' + str(round(NPCR3,6)) + "\n")
     f.write('UACI: ' + str(round(UACI3,6)) + "\n")
 
