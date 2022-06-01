@@ -1,0 +1,20 @@
+Image: 18
+RNA Entropy: 7.999132032502653
+Key Sensivity: 1016 , 99.61
+First Pixcel: 
+NPCR: 0.996994
+UACI: 0.333883
+Midle Pixcel: 
+NPCR: 0.994072
+UACI: 0.316944
+Last Pixcel: 
+NPCR: 0.996769
+UACI: 0.347208
+Average: 
+NPCR: 0.995945
+UACI: 0.332678
+Correlation Coefficient:
+Horizontal: 0.0034
+Vertical: 0.0083
+Diagonal: -0.0055
+Time: 67.087
